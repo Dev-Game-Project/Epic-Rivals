@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../img/equipe.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.title{
+    text-align: center;
+    color: #F9C408;
+    font-family: Trajan Pro;
+    font-size: 35px;
+    font-style: normal;
+    line-height: normal;
+    }

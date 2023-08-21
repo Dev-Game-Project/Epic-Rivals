@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('../img/bonus.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.title{
+    text-align: center;
+    color: #F9C408;
+    font-family: Trajan Pro;
+    font-size: 30px;
+    font-style: normal;
+    line-height: normal;
+    }
+
+.valide{
+    margin-top: auto;
+    margin-bottom: 70px;
+    cursor: pointer;
+    color: #F9C408;
+    background-color: transparent;
+    border: none;
+    font-family: Trajan Pro;
+    font-size: 29px;
+    }
