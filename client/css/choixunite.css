@@ -1,19 +1,82 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
     min-height: 100vh;
     background-image: url('../img/equipe.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.title{
+
+.title {
     text-align: center;
     color: #F9C408;
     font-family: Trajan Pro;
     font-size: 35px;
     font-style: normal;
     line-height: normal;
-    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+#container2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.avatar {
+    margin-top: -50px;
+    width: 140px;
+    height: 240px;
+    border-radius: 5%;
+    background-color: #D9D9D94D;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    align-items: center;
+    padding: 10px;
+}
+#section1{
+justify-content: right;
+}
+#section2{
+    justify-content: left;
+
+}
+
+.square {
+    width: 22%;
+    aspect-ratio: 1;
+    background-color: #D9D9D999;
+    margin-top: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.button {
+    width: 40%;
+    aspect-ratio: 1;
+    background-color: rgb(6, 6, 6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    align-items: center;
+}
+.button img{
+    width: 80%;
+    aspect-ratio: 1;
+    margin-top: 3px;
+}

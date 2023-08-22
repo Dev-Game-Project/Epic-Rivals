@@ -28,3 +28,17 @@ body {
     font-family: Trajan Pro;
     font-size: 29px;
     }
+    .avatar {
+        margin-top: -50px;
+        width: 25%;
+        margin: 10px;
+        aspect-ratio: 192/434;
+        border-radius: 5%;
+        background-color: #D9D9D94D;
+    }
+    #container2{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 100px;
+
+    }
