@@ -1,13 +1,22 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.container{
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    min-width: 100vw;
+    aspect-ratio: 16/9;
     background-image: url('../img/faction.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
 }
 .title{
     text-align: center;
@@ -22,72 +31,72 @@ body {
     width: 320px;
     height: 50px;
     }
-    .faction{
+.faction{
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 4%;
+    aspect-ratio: 1;
     cursor: pointer;
+}
+.image1{
+    bottom: 41%;
+    left: 30.8%;
+}
+.image2{
+    bottom: 41%;
+    left: 48%;
+}
+.image3{
+    bottom: 65.6%;
+    left: 48%;
+}
+.image4{
+    bottom: 17%;
+    left: 48%;
     }
-    .image1{
-        bottom: 295px;
-        left: 474px;
-    }
-    .image2{
-        bottom: 298px;
-        left: 740px;
-    }
-    .image3{
-        bottom: 500px;
-        left: 740px;
-    }
-    .image4{
-        bottom: 84px;
-        right: 740px;
-    }
-    .image5{
-        bottom: 296px;
-        right: 492px;
-    }
-    .modal {
-        display: none;
-        position: fixed;
-        left: 50px;
-        top: 110px;
-        width: 250px;
-        height: 500px;
-        background-color: rgba(182, 100, 54, 0.80);
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        border-radius: 5%;
-    }
-        .monster-info {
-            display: flex;
-            align-items: center;
-            font-family: Trajan Pro;
-            font-size: 15px;
-        }
-    
-        .monster-info img {
-            width: 100px;
-            height: 80px;
-            margin-right: 10px;
-        }
-    
-        .monster-stats {
-            margin-top: 10px;
-        }
+.image5{
+    bottom: 41%;
+    right: 31.9%;
+}
+.modal {
+    display: none;
+    position: fixed;
+    left: 50px;
+    top: 110px;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(182, 100, 54, 0.80);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+}
+.monster-info {
+    display: flex;
+    align-items: center;
+    font-family: Trajan Pro;
+    font-size: 15px;
+}
 
-        .stagecontainer{
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        right: 5px;
-        top: 110px;
-        width: 250px;
-        height: 500px;
-        padding: 10px;
-        }
-        .stagemini{
-            width: 170px;
-            height: 120px;
-        }
+.monster-info img {
+    width: 100px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.monster-stats {
+    margin-top: 10px;
+}
+
+.stagecontainer{
+display: flex;
+flex-direction: column;
+position: fixed;
+right: 5px;
+top: 110px;
+width: 250px;
+height: 500px;
+padding: 10px;
+}
+.stagemini{
+    width: 170px;
+    height: 120px;
+}
