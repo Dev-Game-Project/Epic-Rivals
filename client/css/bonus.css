@@ -12,8 +12,8 @@ body {
 
 .mySwiper {
     display: flex;
-    /* justify-content: space-evenly; */
-
+    margin: auto;
+  
 }
 
 .title {
@@ -60,7 +60,6 @@ h3 {
     text-align: center;
     border: thin medium;
     border-radius: 5%;
-    ;
     border-color: black;
     /* margin: auto; */
 }
