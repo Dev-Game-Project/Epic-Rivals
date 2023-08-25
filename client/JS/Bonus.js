@@ -10,10 +10,13 @@ let selectedBonus = [];
 bonus.forEach(function (bonusElement) {
 	bonusElement.addEventListener('click', function () {
 		
+		
 		// s'assurer que l'utilisateur ne sélectionne pas le même avatar deux fois
 		if (!selectedBonus.includes(bonusElement)) {
 			if (selectedBonus.length < 2) {
 				selectedBonus.push(bonusElement);
+
+				
 
 				// pour indiquer visuellement la sélection
 				if (selectedBonus.length === 1) {
@@ -26,7 +29,10 @@ bonus.forEach(function (bonusElement) {
 				// Ajoutez une transition CSS pour l'effet d'animation
                 bonusElement.style.animation = 'borderAnimation 3s linear infinite';
 			}
-		}
+		} else {
+            // désélectionnez l'avatar déjà sélectionné, 
+            deselectBonus(bonusElement);
+        }
 
 		// Désactiver le bouton si deux avatars n'ont pas encore été choisis
 		if (selectedBonus.length == 2) {
@@ -48,6 +54,7 @@ function deselectBonus(bonusElement) {
         bonusElement.style.animation = '';
     }
 }
+
 
 validezButton.addEventListener('click', () => {
 	// Rediriger l'utilisateur vers une nouvelle page HTML
