@@ -8,18 +8,18 @@ body {
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
     background-position: center;
-    
+
 }
 
 .mySwiper {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     margin: auto;
     width: 100%;
     /* overflow: hidden; /* Empêche le débordement du contenu des slides 
     position: relative; */
-  
+
 }
 
 .title {
@@ -51,12 +51,15 @@ body {
 
 }
 
- .swiper-wrapper{
-    display: flex; 
+.swiper-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .swiper-slide {
-    flex: 0 0 10%; 
+    /* flex: 0 0 10%; */
+    width: 13%;
     height: 470px;
     /* background-position: center;
     background-size: cover; */
@@ -80,10 +83,12 @@ h3 {
     /* margin: auto; */
 }
 
-swiper-pagination{
-    margin-bottom: 100px;
+swiper-pagination {
+    margin-top: 100px;
+    padding-top: 100px;
 }
-.valide {
+
+#valide {
     margin-top: auto;
     margin-bottom: 70px;
     cursor: pointer;
@@ -92,4 +97,15 @@ swiper-pagination{
     border: none;
     font-family: Trajan Pro;
     font-size: 29px;
+}
+@keyframes borderAnimation {
+    0% {
+        border-color: #FF5733;
+    }
+    50% {
+        border-color: #33FF57;
+    }
+    100% {
+        border-color: #FF5733;
+    }
 }

@@ -17,21 +17,6 @@
 
 <body>
     <h1 class="title">CHOISISSEZ UN BONUS <br> POUR CHAQUE <br>EQUIPE</h1>
-    
-    <!-- <div id="container2">
-        <div class="avatar"></div>
-        <div class="avatar"></div>
-        <div class="avatar"></div>
-        <div class="avatar"></div>
-        <div class="avatar"></div>
-        <div class="avatar"></div>
-        <div class="avatar"></div>
-        <div class="avatar"></div>
-        <div class="avatar"></div>
-        <div class="avatar"></div>
-    </div> -->
-
-
 
     <div id="avatar" class="mySwiper">
         <div class="swiper-wrapper">
@@ -45,7 +30,7 @@
                 <h3>Défense+1</h3>
             </div>
 
-            <div id="avatar-3"  class="swiper-slide">
+            <div id="avatar-3" class="swiper-slide">
                 <img src=" img/Alexei.png" alt="human" id="alexei" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
@@ -60,7 +45,7 @@
                 <h3>Défense+1</h3>
             </div>
 
-            <div id="avatar-6"  class="swiper-slide">
+            <div id="avatar-6" class="swiper-slide">
                 <img src=" img/Delara.png" alt="ordre" id="delara" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
@@ -75,7 +60,7 @@
                 <h3>Défense+1</h3>
             </div>
 
-            <div id="avatar-9"  class="swiper-slide">
+            <div id="avatar-9" class="swiper-slide">
                 <img src="img/Skeleton.png" alt="mort" id="skeleton" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
@@ -88,12 +73,19 @@
         </div>
 
     </div>
+    
 
     <div class="swiper-pagination"></div>
-    <button class="valide">VALIDEZ</button>
+    <button id="valide"  disabled>VALIDEZ</button>
+
+    <script src="./JS/Bonus.js"></script>
+
+
+
 
 
     <!-- Swiper JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
@@ -115,7 +107,7 @@
             },
         });
 
-        
+
     </script>
 
 </body>
