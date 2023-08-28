@@ -45,29 +45,29 @@ OK.addEventListener('click', () => {
 	modal.style.display = 'none';
 });
 
-// validezButton.addEventListener('click', () => {
-// 	// Rediriger l'utilisateur vers une nouvelle page HTML
-// 	window.location.href = './combat.html';
+validezButton.addEventListener('click', () => {
+	// Rediriger l'utilisateur vers une nouvelle page HTML
+	window.location.href = './combat.html';
 
-// });
+});
 
 
-// Liste des URL des pages que je souhaite rediriger aléatoirement
-const pageURLs = [
-    "battle.html",
-    "battle0.html",
-    "battle2.html",
-    "battle3.html",
-    "page5.html"
-];
+// // Liste des URL des pages que je souhaite rediriger aléatoirement
+// const pageURLs = [
+//     "battle.html",
+//     "battle0.html",
+//     "battle2.html",
+//     "battle3.html",
+//     "page5.html"
+// ];
 
-// Fonction pour rediriger vers une page aléatoire
-function redirectToRandomPage() {
-    let randomIndex = Math.floor(Math.random() * pageURLs.length);
-    let randomPage = pageURLs[randomIndex];
-    window.location.href = randomPage;
-}
+// // Fonction pour rediriger vers une page aléatoire
+// function redirectToRandomPage() {
+//     let randomIndex = Math.floor(Math.random() * pageURLs.length);
+//     let randomPage = pageURLs[randomIndex];
+//     window.location.href = randomPage;
+// }
 
-// Attachez la fonction de redirection au bouton
-let validezButton = document.getElementById("valide");
-validezButton.addEventListener("click", redirectToRandomPage);
+// // Attachez la fonction de redirection au bouton
+// let validezButton = document.getElementById("valide");
+// validezButton.addEventListener("click", redirectToRandomPage);
