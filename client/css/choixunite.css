@@ -87,7 +87,7 @@ justify-content: right;
     margin-top: auto;
     margin-left: 770px;
     margin-top: 150px;
-    cursor: pointer;
+    /* cursor: pointer; */
     color: #F9C408;
     background-color: transparent;
     border: none;
