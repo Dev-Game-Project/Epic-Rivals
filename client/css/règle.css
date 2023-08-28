@@ -20,9 +20,7 @@ line-height: normal;
 
 }
 .container{
-    position: fixed; 
-    top: 25%;
-    left: 29%;
+ 
 text-align: center;
 display: flex;
 flex-direction:column;
@@ -46,7 +44,7 @@ line-height: 2.5;
     transform: rotate(90deg);
     background-color: transparent;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 .triangle-button:hover{
     border-bottom: 35px solid #c79d08;
