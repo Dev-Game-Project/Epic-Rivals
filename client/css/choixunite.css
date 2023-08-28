@@ -80,3 +80,100 @@ justify-content: right;
     aspect-ratio: 1;
     margin-top: 3px;
 }
+
+
+
+#valide {
+    margin-top: auto;
+    margin-left: 770px;
+    margin-top: 150px;
+    cursor: pointer;
+    color: #F9C408;
+    background-color: transparent;
+    border: none;
+    font-family: Trajan Pro;
+    font-size: 29px;
+}
+
+.modal {
+        position: fixed; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 400px;
+        background-color: #50074D;
+        border-radius: 10px;
+        display: none;
+}
+
+.pseudo{
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    position: absolute;
+    top: 10px; 
+    left: 44px; 
+    display: flex;
+    border-radius: 10px;
+    background-color: #D9D9D999;
+    color: black;
+
+}
+
+.pseudo::placeholder{
+    color: black;
+}
+
+#unite1{
+    width: 105px;
+    height: 85px;
+    background-color: #D9D9D94D;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+
+}
+
+#unite2{
+    width: 105px;
+    height: 85px;
+    background-color: #D9D9D94D;
+    margin-bottom: 15px;
+    border-radius: 10px;
+
+
+}
+
+#unite3{
+    width: 105px;
+    height: 85px;
+    background-color: #D9D9D94D;
+    margin-bottom: 15px;
+    border-radius: 10px;
+
+
+} 
+
+
+#valideUnit{
+    background-color: #D9D9D94D ;
+    border-radius: 5px;
+}
+
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #FF5733;
+    }
+    50% {
+        border-color: #F9C408;
+    }
+    100% {
+        border-color: #50074D;
+    }
+}

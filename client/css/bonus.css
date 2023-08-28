@@ -17,6 +17,7 @@ body {
     align-items: center;
     margin: auto;
     width: 100%;
+    
     /* overflow: hidden; /* Empêche le débordement du contenu des slides 
     position: relative; */
 
@@ -98,14 +99,17 @@ swiper-pagination {
     font-family: Trajan Pro;
     font-size: 29px;
 }
+
+
+
 @keyframes borderAnimation {
     0% {
         border-color: #FF5733;
     }
     50% {
-        border-color: #33FF57;
+        border-color: #F9C408;
     }
     100% {
-        border-color: #FF5733;
+        border-color: #50074D;
     }
 }
