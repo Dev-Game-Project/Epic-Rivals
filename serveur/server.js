@@ -26,10 +26,6 @@ app.use(
     })
 );
 
-//Ecrire bonjour dans le naviguateur
-app.get('/', (req, res) => {
-    res.send('Hello World');
-})
 
 // Routes
 app.use('/', userRoutes);
