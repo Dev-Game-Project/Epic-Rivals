@@ -11,6 +11,7 @@ bonus.forEach(function (bonusElement) {
 	bonusElement.addEventListener('click', function () {
 		
 		
+		
 		// s'assurer que l'utilisateur ne sélectionne pas le même avatar deux fois
 		if (!selectedBonus.includes(bonusElement)) {
 			if (selectedBonus.length < 2) {
