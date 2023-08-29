@@ -137,10 +137,42 @@ function deselectFaction(factionElement) {
 }
 
 
-validezButton.addEventListener('click', () => {
-	// Rediriger l'utilisateur vers une nouvelle page HTML
-	window.location.href = './choixunite.html';
+validezButton.addEventListener('click', async () => {
+    if (selectedFaction.length === 2) {
+        const teamId1 = 1; // ID de l'équipe 1
+        const teamId2 = 2; // ID de l'équipe 2
+        const faction1 = selectedFaction[0].getAttribute('data-faction'); // Faction sélectionnée pour l'équipe 1
+        const faction2 = selectedFaction[1].getAttribute('data-faction'); // Faction sélectionnée pour l'équipe 2
+        
+        try {
+            // Envoie une requête POST pour mettre à jour les factions des équipes
+            const response1 = await fetch(`http://localhost:8000/updatefaction/${teamId1}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ IdFaction: faction1 })
+            });
 
+            const response2 = await fetch(`http://localhost:8000/updatefaction/${teamId2}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ IdFaction: faction2 })
+            });
+
+            // Vérifier les réponses et rediriger si nécessaire
+            if (response1.ok && response2.ok) {
+                // Rediriger l'utilisateur vers une nouvelle page HTML (par exemple, la page de sélection des unités)
+                window.location.href = './choixunite.html';
+            } else {
+                console.error('Erreur lors de la mise à jour des factions');
+            }
+        } catch (error) {
+            console.error('Une erreur s\'est produite lors de la requête :', error);
+        }
+    }
 });
 
 

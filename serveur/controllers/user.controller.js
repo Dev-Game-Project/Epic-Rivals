@@ -184,6 +184,8 @@ const associateAvatarToTeam = (req, res) => {
     const teamId = req.body.IdTeam;
     const avatarId = req.body.IdAvatar;
     const defaultFactionId = 0; // ID de la faction par défaut
+    console.log('teamId:', teamId);
+    console.log('avatarId:', avatarId);
 
     // Insérez une nouvelle entrée dans la table select_ avec la faction par défaut
     const insertSelectQuery = 'INSERT INTO select_ (IdTeam, IdAvatar, IdFaction) VALUES (?, ?, ?)';
