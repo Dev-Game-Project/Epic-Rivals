@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    min-width: 100vw;
+    aspect-ratio: 16/9;
+    background-image: url('../img/faction.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+#container2{
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    top: 20px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  
+
+
+}
+
+.avatar {
+    width: 140px;
+    height: 240px;
+    border-radius: 5%;
+    background-color: #D9D9D94D;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+
+.title {
+    color: #50074D;
+    font-family: Trajan Pro;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    line-height: normal;
+    border-radius: 30px;
+    opacity: 0.6;
+    background: #D9D9D9;
+    width: 320px;
+    height: 50px;
+
+position: absolute;
+right: 40%;
+}
+
+.faction {
+    position: absolute;
+    width: 4%;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.image1 {
+    bottom: 41%;
+    left: 30.8%;
+}
+
+.image2 {
+    bottom: 41%;
+    left: 48%;
+}
+
+.image3 {
+    bottom: 65.6%;
+    left: 48%;
+}
+
+.image4 {
+    bottom: 17%;
+    left: 48%;
+}
+
+.image5 {
+    bottom: 41%;
+    right: 31.9%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 50px;
+    top: 110px;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(182, 100, 54, 0.80);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+}
+
+.monster-info {
+    display: flex;
+    align-items: center;
+    font-family: Trajan Pro;
+    font-size: 15px;
+}
+
+.monster-info img {
+    width: 100px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.monster-stats {
+    margin-top: 10px;
+}
+
+.stagecontainer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 10px;
+    top: 300px;
+    width: 170px;
+    height: 500px;
+    padding: 10px;
+}
+
+
+.stagemini {
+    width: 170px;
+    height: 120px;
+
+}
+
+#valide {
+
+    color: #F9C408;
+    background-color: transparent;
+    border: none;
+    font-family: Trajan Pro;
+    font-size: 29px;
+    position: absolute;
+    bottom: 35px;
+}
+
+
+
+.cercle{
+    border: 4px solid #D9D9D94D;
+    border-radius: 50%;
+}
+
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #FF5733;
+    }
+    50% {
+        border-color: #F9C408;
+    }
+    100% {
+        border-color: #50074D;
+    }
+}

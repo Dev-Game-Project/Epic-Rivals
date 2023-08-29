@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../img/regle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title{
+display: flex;
+justify-content: center;
+color: #F9C408;
+font-family: Trajan Pro;
+font-size: 44px;
+font-style: normal;
+line-height: normal;
+
+}
+.container{
+ 
+text-align: center;
+display: flex;
+flex-direction:column;
+align-items: center;
+color:  #070009;
+font-weight: 900;
+text-align: center;
+font-family: Trajan Pro;
+font-size: 20px;
+font-style: normal;
+line-height: 2.5;
+}
+.triangle-button {
+    width: 0;
+    height: 0;
+    border: none;
+    padding: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 35px solid #F9C408;
+    transform: rotate(90deg);
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 25px;
+}
+.triangle-button:hover{
+    border-bottom: 35px solid #c79d08;
+}

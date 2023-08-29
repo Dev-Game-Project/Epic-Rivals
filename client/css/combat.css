@@ -1,0 +1,14 @@
+
+
+	.container {
+		display: flex;
+		justify-content: center;
+		
+		aspect-ratio: 16/9;
+		background-image: url('../img/battle.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+	}
+	

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faction</title>
+</head>
+<link rel="stylesheet" href="./css/faction.css">
+
+<body>
+
+  
+    <div class="container">
+
+        <div id="container2">
+            <div class="avatar"></div>
+            <div class="avatar"></div>
+        </div>
+        
+
+        <h1 class="title">CHOIX FACTION</h1>
+
+        <div class="embleme">
+            <img class=" faction image1 cercle" src="img/factionC.png" alt="chaos"
+                onmouseover="showMonstersModal('Chaos')" id="chaos" data-faction="1">
+            <img class=" faction image2 cercle" src="img/factionH.png" alt="humain"
+                onmouseover="showMonstersModal('Humain')" id="human" data-faction="2">
+            <img class="faction image3 cercle" src="img/factionD.png" alt="mort"
+                onmouseover="showMonstersModal('Mort')" data-faction="3">
+            <img class=" faction image4 cercle" src="img/factionN.png" alt="nature"
+                onmouseover="showMonstersModal('Nature')" id="nature" data-faction="4">
+            <img class=" faction image5 cercle" src="img/factionO.png" alt="ordre"
+                onmouseover="showMonstersModal('Ordre')" id="order" data-faction="5">
+
+        </div>
+
+
+        <div id="modal" class="modal">
+            <div id="monsterList" class="monster-list"></div>
+        </div>
+
+        <button id="valide" disabled> VALIDEZ </button>
+        
+        <div class="stagecontainer">
+            <img class="stagemini" src="img/166495 3.png" alt="mini">
+            <img class="stagemini" src="img/166729 3.png" alt="mini">
+            <img class="stagemini" src="img/51345 12.png" alt="mini">
+            <img class="stagemini" src="img/55250 3.png" alt="mini">
+            <img class="stagemini" src="img/57687 4.png" alt="mini">
+        </div>
+    </div>
+
+  
+
+
+</body>
+<script src="./JS/faction.js"></script>
+
+</html>
