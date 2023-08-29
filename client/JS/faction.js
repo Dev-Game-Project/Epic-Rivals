@@ -109,6 +109,8 @@ embleme.forEach(function (factionElement) {
 				// animation iteration count
 				// Ajoutez une transition CSS pour l'effet d'animation
                 factionElement.style.animation = 'borderAnimation 3s linear infinite';
+
+                
 			}
 		} else {
             // désélectionnez la faction déjà sélectionnée, 
