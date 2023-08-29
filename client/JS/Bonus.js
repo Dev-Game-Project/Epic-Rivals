@@ -18,7 +18,16 @@ bonus.forEach(function (bonusElement) {
                 selectedBonus.push(avatarId);
 
                 // Ajouter une bordure pour indiquer visuellement la sélection
-                bonusElement.style.border = '4px solid #F9C408';
+                if (selectedBonus.length === 1){
+                bonusElement.style.border = '4px solid #F9C408';}
+
+                else {
+					bonusElement.style.border = '4px solid #50074D';
+				}
+                // animation iteration count
+				// Ajoutez une transition CSS pour l'effet d'animation
+                bonusElement.style.animation = 'borderAnimation 3s linear infinite';
+
 
                 // Activer le bouton de validation si deux avatars sont sélectionnés
                 if (selectedBonus.length === 2) {
