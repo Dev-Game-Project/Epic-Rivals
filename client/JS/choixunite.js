@@ -1,24 +1,61 @@
+// Fonction pour mettre à jour la modal avec les images d'unités
+function updateUnitModalWithImages(imageUrls) {
+    const uniteList = document.getElementById('uniteList');
+
+    // Parcourir les URLs d'images et les ajouter à la liste d'unités dans la modal
+    for (let i = 0; i < imageUrls.length; i++) {
+        const imageUrl = imageUrls[i];
+
+        // Créer un élément <img> pour chaque image d'unité
+        const imgElement = document.createElement('img');
+        imgElement.src = imageUrl;
+
+        // Ajouter la classe CSS à l'élément <img> pour le style
+        imgElement.classList.add('unite-image');
+
+        // Ajouter l'élément <img> à la liste d'unités dans la modal
+        const uniteElement = document.getElementById(`unite${i + 1}`);
+        uniteElement.innerHTML = ''; // Effacer le contenu précédent
+        uniteElement.appendChild(imgElement);
+    }
+}
 
 // Sélectionner une unité 
-let selectUnit = document.querySelectorAll('.button');
+let selectUnit1 = document.querySelectorAll('.section1 .button');
+let selectUnit2 = document.querySelectorAll('.section2 .button');
 
 let modal = document.querySelector('.modal');
 
 
 //  forEach pour ajouter un gestionnaire d'événements à chaque croix
-selectUnit.forEach((button) => {
+selectUnit1.forEach((button) => {
 	button.addEventListener('click', () => {
 		modal.style.display = 'flex';
         // Récupérez l'ID de la faction choisie
         const factionId = 1; // Remplacez par la vraie valeur
 
         // Récupérez les URLs des images des unités depuis le serveur en fonction de l'ID de la faction
-        fetch(`/faction/${factionId}/unitImages`)
+        fetch(`http://localhost:8000/faction/${factionId}/unitImages`)
             .then(response => response.json())
             .then(imageUrls => updateUnitModalWithImages(imageUrls))
             .catch(error => console.error('Error fetching faction unit images:', error));
 	});
 });
+
+selectUnit2.forEach((button) => {
+	button.addEventListener('click', () => {
+		modal.style.display = 'flex';
+        // Récupérez l'ID de la faction choisie
+        const factionId = 2; // Remplacez par la vraie valeur
+
+        // Récupérez les URLs des images des unités depuis le serveur en fonction de l'ID de la faction
+        fetch(`http://localhost:8000/faction/${factionId}/unitImages`)
+            .then(response => response.json())
+            .then(imageUrls => updateUnitModalWithImages(imageUrls))
+            .catch(error => console.error('Error fetching faction unit images:', error));
+	});
+});
+
 
 
 let unites = document.querySelectorAll('.unites');

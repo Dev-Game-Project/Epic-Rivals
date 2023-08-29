@@ -324,11 +324,12 @@ const GetUnitImagesByFaction = (req, res) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         } else {
-            const imageUrls = results.map(unit => unit.urlUnite);
+            const imageUrls = results.map(unite => `http://127.0.0.1:5500/${unite.urlUnite}`);
             res.status(200).json(imageUrls);
         }
     });
 };
+
 
 
 

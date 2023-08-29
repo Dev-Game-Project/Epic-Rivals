@@ -1,29 +1,3 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    // Obtenez les éléments d'avatar sur la page
-    const avatarElement1 = document.getElementById('avatar1');
-    const avatarElement2 = document.getElementById('avatar2');
-
-    // Récupérez les IDs d'équipe que vous avez sélectionnés (remplacez ceci par vos valeurs)
-    const teamId1 = 1; // ID de la première équipe
-    const teamId2 = 2; // ID de la deuxième équipe
-
-    // Fonction pour récupérer l'URL de l'image d'avatar à partir de l'API
-    async function getAvatarUrl(teamId) {
-        const response = await fetch(`http://localhost:8000/selected-avatar/${teamId}`);
-        const data = await response.json();
-        return data.imageUrl;
-    }
-
-    // Fonction pour afficher l'image d'avatar dans l'élément HTML correspondant
-    async function displayAvatar(element, teamId) {
-        const avatarUrl = await getAvatarUrl(teamId);
-        element.style.backgroundImage = `url(${avatarUrl})`;
-    }
-
-    // Appelez la fonction pour afficher les avatars pour chaque équipe
-    await displayAvatar(avatarElement1, teamId1);
-    await displayAvatar(avatarElement2, teamId2);
-});
 
 
 const factions = {

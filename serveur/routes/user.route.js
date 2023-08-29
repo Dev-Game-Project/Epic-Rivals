@@ -48,7 +48,7 @@ router.put('/player/:Idplayer/team', userController.associatePlayerToTeam);
 router.put('/player/:IdPlayer/removeFromTeam', userController.removePlayerFromTeam);
 
 // recup url
-router.get('/selected-avatar/:teamId', userController.getSelectedAvatarUrl);
+router.get('/selected-avatar/:Idteam', userController.getSelectedAvatarUrl);
 
 // recup url unite
 router.get('/faction/:IdFaction/unitImages', userController.GetUnitImagesByFaction);
