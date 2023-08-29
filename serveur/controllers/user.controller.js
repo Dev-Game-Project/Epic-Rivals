@@ -288,6 +288,48 @@ const clearSelectAfterGame = (req, res) => {
 
 
 
+const getSelectedAvatarUrl = (teamId, callback) => {
+    const query = `
+        SELECT avatar.urlAvatar
+        FROM select_ 
+        INNER JOIN avatar ON select_.IdAvatar = avatar.IdAvatar
+        WHERE select_.IdTeam = ?;
+    `;
+    conn.query(query, [teamId], (err, results) => {
+        if (err) {
+            callback(err, null);
+        } else {
+            if (results.length === 0) {
+                callback(null, null); // Aucun avatar sélectionné pour cette équipe
+            } else {
+                const avatarData = results[0];
+                callback(null, avatarData.imageUrl);
+            }
+        }
+    });
+};
+
+const GetUnitImagesByFaction = (req, res) => {
+    const factionId = req.params.IdFaction;
+
+    const query = `
+        SELECT DISTINCT unite.urlUnite
+        FROM unite
+        INNER JOIN comporte ON unite.IdUnite = comporte.IdUnite
+        WHERE comporte.IdFaction = ?
+        LIMIT 3;
+    `;
+
+    conn.query(query, [factionId], (err, results) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        } else {
+            const imageUrls = results.map(unit => unit.urlUnite);
+            res.status(200).json(imageUrls);
+        }
+    });
+};
+
 
 
 
@@ -309,4 +351,6 @@ module.exports = {
     clearSelectAfterGame,
     associatePlayerToTeam,
     removePlayerFromTeam,
+    getSelectedAvatarUrl,
+    GetUnitImagesByFaction,
 };

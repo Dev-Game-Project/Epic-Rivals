@@ -9,6 +9,14 @@ let modal = document.querySelector('.modal');
 selectUnit.forEach((button) => {
 	button.addEventListener('click', () => {
 		modal.style.display = 'flex';
+        // Récupérez l'ID de la faction choisie
+        const factionId = 1; // Remplacez par la vraie valeur
+
+        // Récupérez les URLs des images des unités depuis le serveur en fonction de l'ID de la faction
+        fetch(`/faction/${factionId}/unitImages`)
+            .then(response => response.json())
+            .then(imageUrls => updateUnitModalWithImages(imageUrls))
+            .catch(error => console.error('Error fetching faction unit images:', error));
 	});
 });
 
