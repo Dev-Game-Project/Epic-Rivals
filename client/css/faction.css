@@ -20,10 +20,35 @@ body {
     position: relative;
 }
 
+#container2{
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    top: 20px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  
+
+
+}
+
+.avatar {
+    width: 140px;
+    height: 240px;
+    border-radius: 5%;
+    background-color: #D9D9D94D;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+
 .title {
-    text-align: center;
     color: #50074D;
     font-family: Trajan Pro;
+    text-align: center;
     font-size: 30px;
     font-style: normal;
     line-height: normal;
@@ -32,10 +57,9 @@ body {
     background: #D9D9D9;
     width: 320px;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 40px;
+
+position: absolute;
+right: 40%;
 }
 
 .faction {
@@ -104,31 +128,29 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    right: 5px;
-    top: 110px;
-    width: 250px;
+    right: 10px;
+    top: 300px;
+    width: 170px;
     height: 500px;
     padding: 10px;
 }
 
+
 .stagemini {
     width: 170px;
     height: 120px;
+
 }
 
 #valide {
-    margin-top: auto;
-    margin-right: 330px;
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* cursor: pointer; */
+
     color: #F9C408;
     background-color: transparent;
     border: none;
     font-family: Trajan Pro;
     font-size: 29px;
+    position: absolute;
+    bottom: 35px;
 }
 
 

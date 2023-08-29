@@ -1,0 +1,116 @@
+body {
+	margin: 0;
+	padding: 0;
+	align-items: center;
+	min-height: 100vh;
+	background-image: url('../img/resumepartie.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #070009;
+	font-weight: 900;
+	text-align: center;
+	font-family: Trajan Pro;
+	font-size: 20px;
+	font-style: normal;
+	line-height: 2.5;
+}
+
+
+
+
+
+.winLooser {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 150px;
+}
+.winner {
+
+	width: 13%;
+	height: 470px;
+	background-color: #D9D9D94D;
+	border-radius: 5%;
+	padding-bottom: 10px;
+	box-shadow: 0 0 2em;
+
+}
+
+.looser {
+	width: 13%;
+	height: 470px;
+	background-color: #D9D9D94D;
+	border-radius: 5%;
+	padding-bottom: 10px;
+	box-shadow: 0 0 2em;
+}
+
+.symbol {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.winnerSymbol {
+
+	width: 13%;
+	height: 150px;
+	background-color: #D9D9D94D;
+	border-radius: 5%;
+	padding-bottom: 10px;
+	box-shadow: 0 0 2em;
+
+}
+
+.looserSymbol {
+	width: 13%;
+	height: 150px;
+	background-color: #D9D9D94D;
+	border-radius: 5%;
+	padding-bottom: 10px;
+	box-shadow: 0 0 2em;
+}
+
+
+
+
+.restart {
+	padding: 5px 5px;
+	background-color: #F9C408;
+	color: #8A1B86;
+	border: none;
+	border-radius: 15px;
+	font-size: 30px;
+	cursor: pointer;
+	width: 140px;
+	height: 50px;
+	font-family: Trajan Pro;
+	text-align: center;
+}
+
+
+.quit {
+	padding: 5px 5px;
+	background-color: #F9C408;
+	color: #8A1B86;
+	border: none;
+	border-radius: 15px;
+	font-size: 30px;
+	cursor: pointer;
+	width: 140px;
+	height: 50px;
+	font-family: Trajan Pro;
+	text-align: center;
+	margin-left: 20px;
+
+
+}
