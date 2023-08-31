@@ -8,75 +8,83 @@
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link rel="stylesheet" href="./css/bonus.css">
-
-
 </head>
 
 
-
 <body>
+
+    <audio id="audio" loop src="music/selection.mp3"></audio>
+    <header>
+        <i class="fa-solid fa-volume-high" style=" color:#c79d08" id="icone-volume"></i>
+        <i class="fa-solid fa-volume-xmark" style=" color:#c79d08; display: none;" id="icone-volume-mute"></i>
+    </header>
+
+
     <h1 class="title">CHOISISSEZ UN BONUS <br> POUR CHAQUE <br>EQUIPE</h1>
 
     <div id="avatar" class="mySwiper">
         <div class="swiper-wrapper">
             <div id="avatar-1" class="swiper-slide " data-avatar-id="1">
-                <img src="img/Anwen.png" alt="nature" id="anwen" class="avatarImg" >
+                <img src="img/Anwen.png" alt="nature" id="anwen" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
 
             <div id="avatar-2" class="swiper-slide" data-avatar-id="2">
-                <img src="img/Lasir.png" alt="nature" id="lasir" class="avatarImg" >
+                <img src="img/Lasir.png" alt="nature" id="lasir" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
 
             <div id="avatar-3" class="swiper-slide" data-avatar-id="3">
-                <img src=" img/Alexei.png" alt="human" id="alexei" class="avatarImg" >
+                <img src=" img/Alexei.png" alt="human" id="alexei" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
 
             <div id="avatar-4" class="swiper-slide" data-avatar-id="4">
-                <img src=" img/Fiona.png" alt="human" id="fiona" class="avatarImg" >
+                <img src=" img/Fiona.png" alt="human" id="fiona" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
 
             <div id="avatar-5" class="swiper-slide" data-avatar-id="5">
-                <img src=" img/Cyrus.png" alt="ordre" id="cyrus" class="avatarImg" >
+                <img src=" img/Cyrus.png" alt="ordre" id="cyrus" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
 
             <div id="avatar-6" class="swiper-slide" data-avatar-id="6">
-                <img src=" img/Delara.png" alt="ordre" id="delara" class="avatarImg" >
+                <img src=" img/Delara.png" alt="ordre" id="delara" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
 
             <div id="avatar-7" class="swiper-slide" data-avatar-id="7">
-                <img src="img/Azexes.png" alt="chaos" id="azexes" class="avatarImg" >
+                <img src="img/Azexes.png" alt="chaos" id="azexes" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
 
             <div id="avatar-8" class="swiper-slide" data-avatar-id="8">
-                <img src="img/Necro_Fiona.png" alt="chaos" id="necro" class="avatarImg" >
+                <img src="img/Necro_Fiona.png" alt="chaos" id="necro" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
 
             <div id="avatar-9" class="swiper-slide" data-avatar-id="9">
-                <img src="img/Skeleton.png" alt="mort" id="skeleton" class="avatarImg" >
+                <img src="img/Skeleton.png" alt="mort" id="skeleton" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
 
             <div id="avatar-10" class="swiper-slide" data-avatar-id="10">
-                <img src="img/Jezebeth.png" alt="mort" id="jezebeth" class="avatarImg" >
+                <img src="img/Jezebeth.png" alt="mort" id="jezebeth" class="avatarImg">
                 <h3>Défense+1</h3>
             </div>
 
         </div>
 
     </div>
-    
+
 
     <div class="swiper-pagination"></div>
-    <button id="valide"  disabled>VALIDEZ</button>
+    <button id="valide" disabled>VALIDEZ</button>
 
     <script src="./JS/Bonus.js"></script>
 

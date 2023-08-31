@@ -33,13 +33,6 @@ window.onload = function () {
 	demarrerLecture();
 };
 
-
-// Jouer la musique lorsque la page est chargée altéré par le gestionnaire d'événement au clic sur l'icône de volume/mute donc remplacée par celle d'au dessus
-// window.onload = function() {
-//   lecteurAudio.play();
-// }
-
-
 // Ajouter un gestionnaire d'événement au clic sur l'icône de volume/mute
 volume.addEventListener('click', () => {
 	if (lecteurAudio.paused) {
