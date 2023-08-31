@@ -169,6 +169,7 @@ validezButton.addEventListener('click', async () => {
             if (response1.ok && response2.ok) {
                 // Rediriger l'utilisateur vers une nouvelle page HTML (par exemple, la page de sélection des unités)
                 window.location.href = './choixunite.html';
+                
             } else {
                 console.error('Erreur lors de la mise à jour des factions');
             }

@@ -55,7 +55,4 @@ router.get('/faction/:IdFaction/unitImages', userController.GetUnitImagesByFacti
 
 
 
-
-
-
 module.exports = router;
