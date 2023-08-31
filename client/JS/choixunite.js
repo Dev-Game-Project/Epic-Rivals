@@ -1,3 +1,5 @@
+let factionId1;
+let factionId2;
 
 // Fonction pour obtenir l'ID de faction en fonction de l'ID d'équipe
 async function getFactionIdByTeamId(teamId) {
@@ -37,10 +39,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     await displayAvatar(avatarElement2, teamId2);
     
     try {
-        const factionId1 = await getFactionIdByTeamId(teamId1);
+        factionId1 = await getFactionIdByTeamId(teamId1);
         console.log('Faction ID for team 1:', factionId1);
         
-        const factionId2 = await getFactionIdByTeamId(teamId2);
+        factionId2 = await getFactionIdByTeamId(teamId2);
         console.log('Faction ID for team 2:', factionId2);
         
         // Vous avez maintenant les ID de faction pour les deux équipes, vous pouvez les utiliser comme nécessaire
