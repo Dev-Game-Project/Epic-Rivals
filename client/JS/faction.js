@@ -1,3 +1,32 @@
+// Fonction pour récupérer l'URL de l'avatar sélectionné depuis le serveur
+async function getSelectedAvatarUrl(teamId) {
+    const response = await fetch(`http://localhost:8000/team/${teamId}/avatarUrl`);
+    const data = await response.json();
+    return data.avatarUrl;
+}
+
+// Fonction pour afficher l'image d'avatar dans l'élément HTML correspondant
+async function displayAvatar(element, teamId) {
+    const avatarUrl = await getSelectedAvatarUrl(teamId);
+    element.style.backgroundImage = `url(${avatarUrl})`;
+    element.style.backgroundSize = 'cover'; // Redimensionner l'image pour couvrir toute la zone
+    element.style.backgroundRepeat = 'no-repeat';
+}
+
+// Appelez la fonction pour afficher les avatars pour chaque équipe
+document.addEventListener('DOMContentLoaded', async () => {
+    // Obtenez les éléments d'avatar sur la page
+    const avatarElement1 = document.getElementById('avatar1');
+    const avatarElement2 = document.getElementById('avatar2');
+
+    // Récupérez les IDs d'équipe que vous avez sélectionnés (remplacez ceci par vos valeurs)
+    const teamId1 = 1; // ID de la première équipe
+    const teamId2 = 2; // ID de la deuxième équipe
+
+    // Appelez la fonction pour afficher les avatars pour chaque équipe
+    await displayAvatar(avatarElement1, teamId1);
+    await displayAvatar(avatarElement2, teamId2);
+});
 
 
 const factions = {
@@ -169,7 +198,6 @@ validezButton.addEventListener('click', async () => {
             if (response1.ok && response2.ok) {
                 // Rediriger l'utilisateur vers une nouvelle page HTML (par exemple, la page de sélection des unités)
                 window.location.href = './choixunite.html';
-                
             } else {
                 console.error('Erreur lors de la mise à jour des factions');
             }

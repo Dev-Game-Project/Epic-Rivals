@@ -288,26 +288,29 @@ const clearSelectAfterGame = (req, res) => {
 
 
 
-const getSelectedAvatarUrl = (teamId, callback) => {
+const GetAvatarUrlByTeam = (req, res) => {
+    const teamId = req.params.teamId;
+
     const query = `
         SELECT avatar.urlAvatar
-        FROM select_ 
+        FROM select_
         INNER JOIN avatar ON select_.IdAvatar = avatar.IdAvatar
         WHERE select_.IdTeam = ?;
     `;
+
     conn.query(query, [teamId], (err, results) => {
         if (err) {
-            callback(err, null);
+            return res.status(500).json({ error: err.message });
         } else {
             if (results.length === 0) {
-                callback(null, null); // Aucun avatar sélectionné pour cette équipe
-            } else {
-                const avatarData = results[0];
-                callback(null, avatarData.imageUrl);
+                return res.status(404).json({ message: "No avatar found for the team" });
             }
+            const avatarUrl = results[0].urlAvatar;
+            res.status(200).json({ avatarUrl });
         }
     });
 };
+
 
 const GetUnitImagesByFaction = (req, res) => {
     const factionId = req.params.IdFaction;
@@ -324,14 +327,35 @@ const GetUnitImagesByFaction = (req, res) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         } else {
-            const imageUrls = results.map(unite => `http://127.0.0.1:5500/${unite.urlUnite}`);
+            const imageUrls = results.map(unite => `${unite.urlUnite}`);
             res.status(200).json(imageUrls);
         }
     });
 };
 
 
+const getFactionIdByTeamId = (req, res) => {
+    const teamId = req.params.teamId;
 
+    const query = `
+        SELECT IdFaction
+        FROM select_
+        WHERE IdTeam = ?;
+    `;
+
+    conn.query(query, [teamId], (err, results) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+        } else {
+            if (results.length === 0) {
+                res.status(404).json({ error: 'No faction found for the specified team' });
+            } else {
+                const factionId = results[0].IdFaction;
+                res.status(200).json({ factionId });
+            }
+        }
+    });
+};
 
 
 
@@ -352,6 +376,7 @@ module.exports = {
     clearSelectAfterGame,
     associatePlayerToTeam,
     removePlayerFromTeam,
-    getSelectedAvatarUrl,
+    GetAvatarUrlByTeam,
     GetUnitImagesByFaction,
+    getFactionIdByTeamId,
 };
