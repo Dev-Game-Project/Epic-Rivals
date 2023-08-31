@@ -8,24 +8,32 @@ const conn =mysql.createConnection({
 
 //register a new player
 const createPlayer = (req, res) => {
-    //Utilise req.body de body-parser
-    const {namePlayer,expPlayer} = req.body;
-    // verifier si les champs sont remplis
-    if(!namePlayer){
-        return res.status(400).json({
-            error: 'nom manquant',
-        })
-
-    }
-    const query = 'INSERT INTO player (namePlayer,expPlayer) VALUES (?,?)';
-    conn.query(query, [namePlayer, expPlayer], (err) => {
-        if(err){
-            return res.status(500).json({error: err.message});
-        }else{
-            res.status(200).json({ message: 'Utilisateur enregistré'});
+    const { name, teamId } = req.body;
+    const expPlayer = 0; // Valeur initiale pour expPlayer
+    const query = 'INSERT INTO player (namePlayer, IdTeam, expPlayer) VALUES (?, ?, ?)';
+    
+    conn.query(query, [name, teamId, expPlayer], (err, result) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        } else {
+            res.status(201).json({ message: 'Player created successfully', playerId: result.insertId });
         }
     });
 };
+
+const chooseUnitForPlayer = (req, res) => {
+    const { playerId, uniteId } = req.body;
+    const query = 'INSERT INTO choose (IdPlayer, IdUnite) VALUES (?, ?)';
+    
+    conn.query(query, [playerId, uniteId], (err, result) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        } else {
+            res.status(201).json({ message: 'Unit chosen for player successfully', chooseId: result.insertId });
+        }
+    });
+};
+
 
 // get all unite
 const getAllUnite = (req, res) =>{
@@ -379,4 +387,5 @@ module.exports = {
     GetAvatarUrlByTeam,
     GetUnitImagesByFaction,
     getFactionIdByTeamId,
+    chooseUnitForPlayer,
 };

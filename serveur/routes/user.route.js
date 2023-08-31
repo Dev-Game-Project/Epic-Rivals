@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const userController = require('../controllers/user.controller');
 // register a new user
-router.post('/register', userController.createPlayer);
+router.post('/createPlayer', userController.createPlayer);
 
 //get all unite
 router.get('/all', userController.getAllUnite);
@@ -56,6 +56,10 @@ router.get('/faction/:IdFaction/unitImages', userController.GetUnitImagesByFacti
 
 // Route pour récupérer l'ID de faction en fonction de l'ID d'équipe
 router.get('/team/:teamId/factionId', userController.getFactionIdByTeamId);
+
+
+
+router.post('/choose', userController.chooseUnitForPlayer);
 
 
 
