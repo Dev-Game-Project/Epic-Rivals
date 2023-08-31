@@ -11,6 +11,12 @@ body {
 
 }
 
+header{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 .mySwiper {
     /* position: fixed; 
     top: 25%;
