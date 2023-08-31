@@ -125,7 +125,7 @@ let selectedUnit = null;
 
 // Désactiver le bouton "OK" initialement
 OK.disabled = true;
-
+const unitIdMap = {};
 // Fonction pour mettre à jour l'état du bouton "OK"
 function updateOKButtonState() {
     // Vérification si les deux conditions sont remplies
@@ -163,7 +163,7 @@ unites.forEach(function (unitElement) {
         } else if (selectedTeam === 2) {
             teamId = 2;
         }
-
+        const unitId = unitIdMap[selectedUnit];
 
         // Envoyer le nom du joueur et l'unité choisie au serveur pour enregistrer
         const response = await fetch('http://localhost:8000/createPlayer', {
@@ -173,7 +173,8 @@ unites.forEach(function (unitElement) {
             },
             body: JSON.stringify({
                 name: playerName,
-                teamId: teamId
+                teamId: teamId,
+                Idunit: unitId,
             })
         });
 
